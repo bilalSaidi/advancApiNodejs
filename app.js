@@ -2,7 +2,18 @@ var createError = require('http-errors');
 var express = require('express');
 var logger = require('morgan');
 
-var cors = require('corse');
+var cors = require('cors');
+
+var  mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/shopingApi' , {useNewUrlParser : true , useUnifiedTopology : true} , (err)=>{
+  if(err){
+    console.log(err);
+    return 
+  }else{
+    console.log('Connected To Db ')
+  }
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
