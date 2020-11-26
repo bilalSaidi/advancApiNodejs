@@ -1,11 +1,16 @@
 var createError = require('http-errors');
 var express = require('express');
 var logger = require('morgan');
+
+var cors = require('corse');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
 
+app.use(cors());
 // view engine setup
 
 
