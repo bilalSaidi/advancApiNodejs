@@ -2,6 +2,8 @@ var createError = require('http-errors');
 var express = require('express');
 var logger = require('morgan');
 
+var app = express();
+
 var cors = require('cors');
 
 var  mongoose = require('mongoose');
@@ -14,19 +16,21 @@ mongoose.connect('mongodb://localhost/shopingApi' , {useNewUrlParser : true , us
     console.log('Connected To Db ')
   }
 });
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 
-var app = express();
+
 
 app.use(cors());
 // view engine setup
 
 
 app.use(logger('dev'));
-app.use(express.json());
+
 
 
 app.use('/', indexRouter);
