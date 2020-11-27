@@ -1,16 +1,16 @@
 # advancApiNodejs
 
-###users :
- -- sign up (username , password ) hash the password using bycrypt  
- -- sign in 
- -- update & delete user
-###product :
- -- product router
- -- crud product (create read update delete )
-###order :
- -- order router
- -- crud order (create read update delete )
-###images :
- -- save images 
- -- image validation
+### users :
+ -- sign up (username , password ) hash the password using bycrypt  <br>
+ -- sign in <br>
+ -- update & delete user <br>
+### product :
+ -- product router <br>
+ -- crud product (create read update delete ) <br>
+### order :
+ -- order router <br>
+ -- crud order (create read update delete ) <br>
+### images :
+ -- save images  <br>
+ -- image validation <br>
  
